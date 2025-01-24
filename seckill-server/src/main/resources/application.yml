@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: ${datasource.driver-class-name}
+    url: ${datasource.url}
+    username: ${datasource.username}
+    password: ${datasource.password}
+
+  profiles:
+    active: dev
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.song.entity
+
+
+seckill:
+  jwt:
+    secret-key: song
+    ttl: 720000000
+    token-name: token
