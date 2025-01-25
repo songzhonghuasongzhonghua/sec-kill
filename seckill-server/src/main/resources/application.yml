@@ -4,16 +4,27 @@ spring:
     url: ${datasource.url}
     username: ${datasource.username}
     password: ${datasource.password}
-
   profiles:
     active: dev
+
+#redis配置
+  data:
+    redis:
+      database: ${redis.database}
+      port: ${redis.port}
+      host: ${redis.host}
+      lettuce: #连接池
+        pool:
+          max-active: 10 #最大连接量
+#mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.song.entity
 
-
+#jwt配置
 seckill:
   jwt:
     secret-key: song
     ttl: 720000000
     token-name: token
+
