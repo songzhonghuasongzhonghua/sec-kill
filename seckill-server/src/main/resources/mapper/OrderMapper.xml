@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.song.mapper.OrderMapper">
+    <insert id="insert" parameterType="order" useGeneratedKeys="true" keyProperty="id">
+        insert into `order` (user_id,goods_id,delivery_add_id,goods_name,goods_count,goods_price,order_channel,status,create_date,pay_date)
+        values (#{userId},#{goodsId},#{deliveryAddId},#{goodsName},#{goodsCount},#{goodsPrice},#{orderChannel},#{status},#{createDate},#{payData})
+    </insert>
+</mapper>

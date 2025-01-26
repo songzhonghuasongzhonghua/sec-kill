@@ -31,4 +31,6 @@ seckill:
     secret-key: song
     ttl: 720000000
     token-name: token
-
+logging:
+  level:
+    com.song.mapper: debug

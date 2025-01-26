@@ -11,6 +11,6 @@ public interface SeckillGoodsMapper {
     Integer getStockCountByGoodsId(Integer goodsId);
 
 
-    @Update("update seckill_goods set stock_count = #{count} where goods_id =#{goodsId}")
-    void updateStockCountByGoodsId(Integer goodsId,Integer count);
+    @Update("update seckill_goods set stock_count = #{count} where goods_id =#{goodsId} and stock_count > 0")
+    Integer updateStockCountByGoodsId(Integer goodsId,Integer count);
 }

@@ -24,7 +24,6 @@ public class SeckillController {
         log.info("开启秒杀:{}",goodsId);
         seckillService.doSeckill(goodsId);
         return Result.success();
-
     }
 
 }
