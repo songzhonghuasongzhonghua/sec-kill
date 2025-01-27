@@ -7,8 +7,6 @@ spring:
   profiles:
     active: dev
 
-
-
 #redis配置
   data:
     redis:
@@ -18,6 +16,16 @@ spring:
       lettuce: #连接池
         pool:
           max-active: 10 #最大连接量
+#rabbitmq配置
+  rabbitmq:
+    host: ${rabbitmq.host}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
+    port: ${rabbitmq.port}
+    virtual-host: ${rabbitmq.virtual-host}
+
+
+
 #mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
